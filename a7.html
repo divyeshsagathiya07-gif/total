@@ -1,0 +1,1654 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sissy 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    background:#050005;
+    font-family:Poppins,sans-serif;
+}
+
+body{
+    color:white;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.story{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            #52002d 0%,
+            #240016 38%,
+            #090006 75%,
+            #020002 100%
+        );
+}
+
+/* dark cinematic overlay */
+
+.story::before{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle,
+            transparent 30%,
+            rgba(0,0,0,.72) 100%
+        );
+
+    z-index:100;
+    pointer-events:none;
+}
+
+/* =========================
+   STARS
+========================= */
+
+.stars{
+    position:absolute;
+    inset:0;
+    z-index:1;
+}
+
+.star{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    background:white;
+    border-radius:50%;
+
+    box-shadow:
+        0 0 8px white,
+        0 0 18px #ff8ac6;
+
+    animation:
+        twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+        opacity:.15;
+        transform:scale(.5);
+    }
+
+    50%{
+        opacity:1;
+        transform:scale(1.8);
+    }
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    z-index:30;
+
+    animation:
+        introOut
+        4s
+        ease
+        forwards;
+}
+
+.intro-small{
+
+    font-size:11px;
+    letter-spacing:6px;
+
+    color:#ffd5e9;
+
+    text-transform:uppercase;
+}
+
+.intro-title{
+
+    margin-top:20px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:clamp(60px,13vw,130px);
+
+    line-height:.9;
+
+    background:
+        linear-gradient(
+            90deg,
+            #fff,
+            #ff8bc8,
+            #fff,
+            #ff4da6,
+            #fff
+        );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:textShine 4s linear infinite;
+}
+
+@keyframes textShine{
+
+    to{
+        background-position:300%;
+    }
+}
+
+@keyframes introOut{
+
+    0%{
+        opacity:0;
+        transform:scale(.7);
+        filter:blur(15px);
+    }
+
+    20%{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1.4);
+        filter:blur(15px);
+    }
+}
+
+/* =========================
+   HEART
+========================= */
+
+.heart{
+
+    position:absolute;
+
+    width:95px;
+    height:95px;
+
+    left:50%;
+    top:50%;
+
+    transform:
+        translate(-50%,-50%)
+        rotate(-45deg);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff79bd,
+            #ff006e
+        );
+
+    border-radius:18px;
+
+    z-index:31;
+
+    opacity:0;
+
+    box-shadow:
+        0 0 30px #ff1980,
+        0 0 80px #ff1980,
+        0 0 150px rgba(255,0,120,.7);
+
+    animation:
+        heartIntro
+        3s
+        ease
+        1.5s
+        forwards;
+}
+
+.heart::before,
+.heart::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:95px;
+    height:95px;
+
+    border-radius:50%;
+
+    background:inherit;
+}
+
+.heart::before{
+    top:-47px;
+    left:0;
+}
+
+.heart::after{
+    top:0;
+    left:47px;
+}
+
+@keyframes heartIntro{
+
+    0%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-45deg)
+            scale(.1);
+    }
+
+    30%{
+        opacity:1;
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-45deg)
+            scale(1);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translate(-50%,-50%)
+            rotate(-45deg)
+            scale(1.8);
+    }
+}
+
+/* =========================
+   HAPPY BIRTHDAY
+========================= */
+
+.birthday{
+
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+
+    z-index:25;
+
+    opacity:0;
+
+    animation:
+        birthdayShow
+        4s
+        ease
+        3.8s
+        forwards;
+}
+
+.birthday-small{
+
+    font-size:11px;
+    letter-spacing:5px;
+
+    color:#ffd9ec;
+
+    text-transform:uppercase;
+}
+
+.birthday-title{
+
+    margin-top:15px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:clamp(65px,14vw,145px);
+
+    color:#fff;
+
+    text-shadow:
+        0 0 15px #ff67b5,
+        0 0 40px #ff1980,
+        0 0 80px rgba(255,0,120,.6);
+}
+
+@keyframes birthdayShow{
+
+    0%{
+        opacity:0;
+        transform:scale(.5);
+        filter:blur(20px);
+    }
+
+    20%{
+        opacity:1;
+        transform:scale(1);
+        filter:blur(0);
+    }
+
+    70%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+        transform:scale(1.15);
+    }
+}
+
+/* =========================
+   PHOTO SLIDER
+========================= */
+
+.photo-slider{
+
+    position:absolute;
+    inset:0;
+
+    z-index:10;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    opacity:0;
+
+    animation:
+        sliderStart
+        1s
+        ease
+        7.5s
+        forwards;
+}
+
+@keyframes sliderStart{
+
+    to{
+        opacity:1;
+    }
+}
+
+.photo{
+
+    position:absolute;
+
+    width:min(310px,72vw);
+    height:min(420px,62vh);
+
+    border-radius:25px;
+
+    padding:7px;
+
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            #ff7cbd,
+            white,
+            #ff3f99
+        );
+
+    box-shadow:
+        0 20px 80px rgba(255,0,130,.5),
+        0 0 40px rgba(255,90,170,.4);
+
+    opacity:0;
+
+    transform:
+        translateX(100vw)
+        rotate(8deg)
+        scale(.8);
+
+    overflow:hidden;
+}
+
+.photo img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:20px;
+}
+
+/* photo timing */
+
+.photo:nth-child(1){
+    animation:photoOne 4s ease 7.5s forwards;
+}
+
+.photo:nth-child(2){
+    animation:photoTwo 4s ease 10.5s forwards;
+}
+
+.photo:nth-child(3){
+    animation:photoThree 4s ease 13.5s forwards;
+}
+
+.photo:nth-child(4){
+    animation:photoFour 4s ease 16.5s forwards;
+}
+
+.photo:nth-child(5){
+    animation:photoFive 4s ease 19.5s forwards;
+}
+
+.photo:nth-child(6){
+    animation:photoSix 4s ease 22.5s forwards;
+}
+
+/* LAST PHOTO STOPS — DOES NOT MOVE OUT */
+
+.photo:nth-child(7){
+    animation:photoSeven 5s ease 25.5s forwards;
+}
+
+
+/* first six */
+
+@keyframes photoOne{
+
+    0%{
+        opacity:0;
+        transform:translateX(100vw) rotate(10deg) scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:translateX(0) rotate(-2deg) scale(1);
+    }
+
+    75%{
+        opacity:1;
+        transform:translateX(0) rotate(2deg) scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(-100vw) rotate(-10deg) scale(.8);
+    }
+}
+
+@keyframes photoTwo{
+
+    0%{
+        opacity:0;
+        transform:translateX(100vw) rotate(10deg) scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:translateX(0) rotate(2deg) scale(1);
+    }
+
+    75%{
+        opacity:1;
+        transform:translateX(0) rotate(-2deg) scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(-100vw) rotate(-10deg) scale(.8);
+    }
+}
+
+@keyframes photoThree{
+
+    0%{
+        opacity:0;
+        transform:translateX(100vw) rotate(8deg) scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:translateX(0) rotate(-2deg) scale(1);
+    }
+
+    75%{
+        opacity:1;
+        transform:translateX(0) rotate(2deg) scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(-100vw) rotate(-10deg) scale(.8);
+    }
+}
+
+@keyframes photoFour{
+
+    0%{
+        opacity:0;
+        transform:translateX(100vw) rotate(10deg) scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:translateX(0) rotate(2deg) scale(1);
+    }
+
+    75%{
+        opacity:1;
+        transform:translateX(0) rotate(-2deg) scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(-100vw) rotate(-10deg) scale(.8);
+    }
+}
+
+@keyframes photoFive{
+
+    0%{
+        opacity:0;
+        transform:translateX(100vw) rotate(10deg) scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:translateX(0) rotate(-2deg) scale(1);
+    }
+
+    75%{
+        opacity:1;
+        transform:translateX(0) rotate(2deg) scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(-100vw) rotate(-10deg) scale(.8);
+    }
+}
+
+@keyframes photoSix{
+
+    0%{
+        opacity:0;
+        transform:translateX(100vw) rotate(10deg) scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:translateX(0) rotate(2deg) scale(1);
+    }
+
+    75%{
+        opacity:1;
+        transform:translateX(0) rotate(-2deg) scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:translateX(-100vw) rotate(-10deg) scale(.8);
+    }
+}
+
+
+/* LAST PHOTO */
+
+@keyframes photoSeven{
+
+    0%{
+        opacity:0;
+        transform:
+            translateX(100vw)
+            rotate(10deg)
+            scale(.8);
+    }
+
+    15%{
+        opacity:1;
+        transform:
+            translateX(0)
+            rotate(-2deg)
+            scale(1);
+    }
+
+    45%{
+        opacity:1;
+        transform:
+            translateX(0)
+            rotate(2deg)
+            scale(1.03);
+    }
+
+    100%{
+        opacity:0;
+        transform:
+            translateX(0)
+            rotate(0)
+            scale(.9);
+    }
+}
+
+
+/* =========================
+   BIRTHDAY WISH
+========================= */
+
+.wish{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:45;
+
+    display:flex;
+
+    justify-content:flex-start;
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    padding-top:7vh;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    animation:
+        wishShow
+        4s
+        ease
+        29.8s
+        forwards;
+}
+
+.wish-label{
+
+    font-size:10px;
+
+    letter-spacing:5px;
+
+    color:#ff9dcc;
+
+    text-transform:uppercase;
+}
+
+.wish-title{
+
+    margin-top:5px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:
+        clamp(50px,9vw,90px);
+
+    color:white;
+
+    text-shadow:
+        0 0 15px #ff4fa5,
+        0 0 40px #ff1681;
+}
+
+.wish-text{
+
+    width:90%;
+    max-width:650px;
+
+    margin-top:5px;
+
+    font-size:13px;
+
+    line-height:1.7;
+
+    color:#ffe5f1;
+}
+
+.wish-love{
+
+    margin-top:10px;
+
+    font-size:9px;
+
+    letter-spacing:4px;
+
+    color:#ff8ac6;
+
+    text-transform:uppercase;
+}
+
+@keyframes wishShow{
+
+    0%{
+        opacity:0;
+        transform:translateY(30px) scale(.95);
+        filter:blur(10px);
+    }
+
+    20%{
+        opacity:1;
+        transform:translateY(0) scale(1);
+        filter:blur(0);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+
+/* =========================
+   BEST MEMORIES
+========================= */
+
+.memory-gallery{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    height:58vh;
+
+    z-index:50;
+
+    padding:
+        15px
+        5vw
+        25px;
+
+    overflow-y:auto;
+    overflow-x:hidden;
+
+    opacity:0;
+    visibility:hidden;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent,
+            rgba(15,0,10,.85) 18%,
+            rgba(5,0,5,.98)
+        );
+
+    animation:
+        galleryShow
+        2s
+        ease
+        30.5s
+        forwards;
+
+    scrollbar-width:none;
+}
+
+.memory-gallery::-webkit-scrollbar{
+    display:none;
+}
+
+.gallery-heading{
+
+    text-align:center;
+
+    margin-bottom:15px;
+}
+
+.gallery-mini{
+
+    font-size:8px;
+
+    letter-spacing:4px;
+
+    color:#ff8fc7;
+
+    text-transform:uppercase;
+}
+
+.gallery-title{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:
+        clamp(35px,6vw,60px);
+
+    color:white;
+
+    text-shadow:
+        0 0 15px #ff4fa5,
+        0 0 30px #ff1681;
+}
+
+.gallery-line{
+
+    width:60px;
+    height:2px;
+
+    margin:6px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #ff6bb4,
+            transparent
+        );
+
+    box-shadow:0 0 12px #ff4fa5;
+}
+
+.memory-grid{
+
+    width:min(1100px,100%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:15px;
+
+    padding-bottom:20px;
+}
+
+.memory-card{
+
+    position:relative;
+
+    padding:5px;
+
+    border-radius:18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            white,
+            #ff4fa5,
+            white
+        );
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,.5),
+        0 0 20px rgba(255,50,150,.25);
+
+    opacity:0;
+
+    transform:
+        translateY(50px)
+        scale(.85);
+
+    animation:
+        cardReveal
+        .8s
+        ease
+        forwards;
+}
+
+.memory-card:nth-child(1){
+    animation-delay:30.7s;
+}
+
+.memory-card:nth-child(2){
+    animation-delay:30.85s;
+}
+
+.memory-card:nth-child(3){
+    animation-delay:31s;
+}
+
+.memory-card:nth-child(4){
+    animation-delay:31.15s;
+}
+
+.memory-card:nth-child(5){
+    animation-delay:31.3s;
+}
+
+.memory-card:nth-child(6){
+    animation-delay:31.45s;
+}
+
+.memory-card:nth-child(7){
+    animation-delay:31.6s;
+}
+
+.memory-image{
+
+    position:relative;
+
+    aspect-ratio:4/5;
+
+    overflow:hidden;
+
+    border-radius:14px;
+
+    background:#16000d;
+}
+
+.memory-image img{
+
+    width:100%;
+    height:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:
+        transform .7s ease;
+}
+
+.memory-image::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(0,0,0,.5)
+        );
+}
+
+.memory-number{
+
+    position:absolute;
+
+    top:8px;
+    left:8px;
+
+    width:25px;
+    height:25px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:
+        rgba(255,255,255,.16);
+
+    border:
+        1px solid rgba(255,255,255,.7);
+
+    backdrop-filter:blur(8px);
+
+    font-size:8px;
+
+    z-index:5;
+}
+
+.memory-caption{
+
+    padding:
+        7px
+        3px
+        5px;
+
+    text-align:center;
+}
+
+.memory-caption span{
+
+    display:block;
+
+    font-size:5px;
+
+    letter-spacing:2px;
+
+    color:#ff82bd;
+}
+
+.memory-caption h3{
+
+    margin-top:2px;
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:20px;
+
+    font-weight:400;
+
+    color:white;
+}
+
+.memory-card:hover{
+
+    transform:
+        translateY(-6px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 50px rgba(255,0,130,.35);
+}
+
+.memory-card:hover img{
+
+    transform:scale(1.08);
+}
+
+@keyframes cardReveal{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            translateY(50px)
+            scale(.85);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+@keyframes galleryShow{
+
+    0%{
+        opacity:0;
+        visibility:hidden;
+    }
+
+    100%{
+        opacity:1;
+        visibility:visible;
+    }
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.floating-heart{
+
+    position:absolute;
+
+    bottom:-50px;
+
+    z-index:90;
+
+    color:#ff6db5;
+
+    text-shadow:
+        0 0 15px #ff1681;
+
+    pointer-events:none;
+
+    animation:
+        floatHeart
+        6s
+        linear
+        forwards;
+}
+
+@keyframes floatHeart{
+
+    0%{
+        opacity:0;
+        transform:
+            translateY(0)
+            scale(.5)
+            rotate(0);
+    }
+
+    15%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:0;
+
+        transform:
+            translateY(-110vh)
+            translateX(var(--move))
+            scale(1.5)
+            rotate(360deg);
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .memory-grid{
+        grid-template-columns:
+            repeat(3,1fr);
+
+        gap:10px;
+    }
+
+    .memory-gallery{
+        height:57vh;
+        padding:12px 15px 20px;
+    }
+
+    .memory-caption h3{
+        font-size:17px;
+    }
+}
+
+@media(max-width:600px){
+
+    .wish{
+        padding-top:5vh;
+    }
+
+    .wish-title{
+        font-size:50px;
+    }
+
+    .wish-text{
+        font-size:11px;
+        line-height:1.6;
+    }
+
+    .memory-gallery{
+        height:56vh;
+    }
+
+    .memory-grid{
+        grid-template-columns:
+            repeat(2,1fr);
+
+        gap:9px;
+    }
+
+    .memory-card{
+        padding:4px;
+        border-radius:14px;
+    }
+
+    .memory-image{
+        border-radius:10px;
+    }
+
+    .memory-caption h3{
+        font-size:17px;
+    }
+
+    .gallery-title{
+        font-size:45px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="story">
+
+    <!-- STARS -->
+
+    <div class="stars" id="stars"></div>
+
+
+    <!-- INTRO -->
+
+    <div class="intro">
+
+        <div class="intro-small">
+            A Little Story Made With Love
+        </div>
+
+        <div class="intro-title">
+            Someone Special...
+        </div>
+
+    </div>
+
+
+    <!-- HEART -->
+
+    <div class="heart"></div>
+
+
+    <!-- HAPPY BIRTHDAY -->
+
+    <div class="birthday">
+
+        <div class="birthday-small">
+            Today Is Your Special Day
+        </div>
+
+        <div class="birthday-title">
+            Happy Birthday
+        </div>
+
+    </div>
+
+
+    <!-- PHOTO SLIDESHOW -->
+
+    <div class="photo-slider">
+
+        <div class="photo">
+            <img src="photo1.jpg" alt="Memory 1">
+        </div>
+
+        <div class="photo">
+            <img src="photo2.jpg" alt="Memory 2">
+        </div>
+
+        <div class="photo">
+            <img src="photo3.jpg" alt="Memory 3">
+        </div>
+
+        <div class="photo">
+            <img src="photo4.jpg" alt="Memory 4">
+        </div>
+
+        <div class="photo">
+            <img src="photo5.jpg" alt="Memory 5">
+        </div>
+
+        <div class="photo">
+            <img src="photo6.jpg" alt="Memory 6">
+        </div>
+
+        <div class="photo">
+            <img src="photo7.jpg" alt="Memory 7">
+        </div>
+
+    </div>
+
+
+    <!-- BIRTHDAY WISH -->
+
+    <div class="wish">
+
+        <div class="wish-label">
+            A Special Message For You
+        </div>
+
+        <div class="wish-title">
+            Happy Birthday, Sissy 💗
+        </div>
+
+        <div class="wish-text">
+
+            May your life always be filled with
+            happiness, love, beautiful memories,
+            endless smiles and wonderful moments.
+            Keep shining and keep smiling always. ✨
+
+        </div>
+
+        <div class="wish-love">
+            Made With ❤️ Just For You
+        </div>
+
+    </div>
+
+
+    <!-- BEST MEMORIES -->
+
+    <section class="memory-gallery">
+
+        <div class="gallery-heading">
+
+            <div class="gallery-mini">
+                A Collection Of
+            </div>
+
+            <div class="gallery-title">
+                Best Memories
+            </div>
+
+            <div class="gallery-line"></div>
+
+        </div>
+
+
+        <div class="memory-grid">
+
+
+            <!-- MEMORY 1 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo1.jpg">
+
+                    <div class="memory-number">
+                        01
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Beautiful Moments ✨
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 2 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo2.jpg">
+
+                    <div class="memory-number">
+                        02
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Forever Smiles 💗
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 3 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo3.jpg">
+
+                    <div class="memory-number">
+                        03
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Little Moments ✨
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 4 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo4.jpg">
+
+                    <div class="memory-number">
+                        04
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Pure Happiness 🌸
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 5 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo5.jpg">
+
+                    <div class="memory-number">
+                        05
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Moments To Remember 💕
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 6 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo6.jpg">
+
+                    <div class="memory-number">
+                        06
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Our Beautiful Story 💖
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+            <!-- MEMORY 7 -->
+
+            <div class="memory-card">
+
+                <div class="memory-image">
+
+                    <img src="photo7.jpg">
+
+                    <div class="memory-number">
+                        07
+                    </div>
+
+                </div>
+
+                <div class="memory-caption">
+
+                    <span>BEST MEMORY</span>
+
+                    <h3>
+                        Always Special ✨
+                    </h3>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<script>
+
+/* =========================
+   STARS
+========================= */
+
+const stars =
+document.getElementById("stars");
+
+for(let i=0;i<100;i++){
+
+    const star =
+        document.createElement("div");
+
+    star.className="star";
+
+    star.style.left =
+        Math.random()*100+"%";
+
+    star.style.top =
+        Math.random()*100+"%";
+
+    star.style.animationDelay =
+        Math.random()*4+"s";
+
+    star.style.animationDuration =
+        (2+Math.random()*4)+"s";
+
+    stars.appendChild(star);
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHeart(){
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "floating-heart";
+
+    heart.innerHTML =
+        Math.random()>.5
+        ? "♥"
+        : "♡";
+
+    heart.style.left =
+        Math.random()*100+"%";
+
+    heart.style.fontSize =
+        (12+Math.random()*25)+"px";
+
+    heart.style.setProperty(
+        "--move",
+        (Math.random()*180-90)+"px"
+    );
+
+    heart.style.animationDuration =
+        (4+Math.random()*4)+"s";
+
+    document
+        .querySelector(".story")
+        .appendChild(heart);
+
+    setTimeout(()=>{
+        heart.remove();
+    },8000);
+}
+
+
+/* hearts only during slideshow */
+
+const heartInterval =
+setInterval(createHeart,350);
+
+setTimeout(()=>{
+
+    clearInterval(heartInterval);
+
+},30000);
+
+</script>
+
+</body>
+</html>
+
