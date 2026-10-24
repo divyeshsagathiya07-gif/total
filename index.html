@@ -25,10 +25,17 @@
 html,
 body{
     width:100%;
-    height:100%;
+    min-height:100%;
+    margin:0;
     overflow:hidden;
     background:#050005;
     font-family:Poppins,sans-serif;
+    -webkit-text-size-adjust:100%;
+}
+
+.story{
+    min-height:100vh;
+    min-height:100svh;
 }
 
 body{
@@ -43,6 +50,7 @@ body{
     position:relative;
     width:100%;
     height:100vh;
+    height:100svh;
     overflow:hidden;
 
     background:
@@ -465,33 +473,33 @@ body{
 /* photo timing */
 
 .photo:nth-child(1){
-    animation:photoOne 4s ease 7.5s forwards;
+    animation:photoOne 2.5s ease 7.5s forwards;
 }
 
 .photo:nth-child(2){
-    animation:photoTwo 4s ease 10.5s forwards;
+    animation:photoTwo 2.5s ease 9.7s forwards;
 }
 
 .photo:nth-child(3){
-    animation:photoThree 4s ease 13.5s forwards;
+    animation:photoThree 2.5s ease 11.9s forwards;
 }
 
 .photo:nth-child(4){
-    animation:photoFour 4s ease 16.5s forwards;
+    animation:photoFour 2.5s ease 14.1s forwards;
 }
 
 .photo:nth-child(5){
-    animation:photoFive 4s ease 19.5s forwards;
+    animation:photoFive 2.5s ease 16.3s forwards;
 }
 
 .photo:nth-child(6){
-    animation:photoSix 4s ease 22.5s forwards;
+    animation:photoSix 2.5s ease 18.5s forwards;
 }
 
 /* LAST PHOTO STOPS — DOES NOT MOVE OUT */
 
 .photo:nth-child(7){
-    animation:photoSeven 5s ease 25.5s forwards;
+    animation:photoSeven 3s ease 20.7s forwards;
 }
 
 
@@ -705,7 +713,7 @@ body{
         wishShow
         4s
         ease
-        29.8s
+        24s
         forwards;
 }
 
@@ -823,7 +831,7 @@ body{
         galleryShow
         2s
         ease
-        30.5s
+        24.7s
         forwards;
 
     scrollbar-width:none;
@@ -933,31 +941,31 @@ body{
 }
 
 .memory-card:nth-child(1){
-    animation-delay:30.7s;
+    animation-delay:24.9s;
 }
 
 .memory-card:nth-child(2){
-    animation-delay:30.85s;
+    animation-delay:25.05s;
 }
 
 .memory-card:nth-child(3){
-    animation-delay:31s;
+    animation-delay:25.2s;
 }
 
 .memory-card:nth-child(4){
-    animation-delay:31.15s;
+    animation-delay:25.35s;
 }
 
 .memory-card:nth-child(5){
-    animation-delay:31.3s;
+    animation-delay:25.5s;
 }
 
 .memory-card:nth-child(6){
-    animation-delay:31.45s;
+    animation-delay:25.65s;
 }
 
 .memory-card:nth-child(7){
-    animation-delay:31.6s;
+    animation-delay:25.8s;
 }
 
 .memory-image{
@@ -1231,6 +1239,127 @@ body{
 
     .gallery-title{
         font-size:45px;
+    }
+}
+
+
+
+/* Extra responsive tuning for phones, tablets and laptop screens */
+.photo{
+    width:min(310px, 72vw, 38vh);
+    height:min(420px, 62vh, 110vw);
+}
+
+@media (max-width: 600px){
+    .intro-small,
+    .birthday-small{
+        max-width:90vw;
+        text-align:center;
+        font-size:9px;
+        letter-spacing:3px;
+        line-height:1.6;
+    }
+
+    .intro-title{
+        max-width:94vw;
+        text-align:center;
+        font-size:clamp(48px, 15vw, 78px);
+    }
+
+    .heart{
+        transform:translate(-50%,-50%) rotate(-45deg) scale(.72);
+    }
+
+    .birthday-title{
+        max-width:95vw;
+        text-align:center;
+        font-size:clamp(48px, 13vw, 76px);
+    }
+
+    .photo{
+        width:min(72vw, 34vh);
+        height:min(48vh, 112vw);
+        padding:5px;
+        border-radius:18px;
+    }
+
+    .photo img{
+        border-radius:14px;
+    }
+
+    .wish{
+        padding:4vh 12px 0;
+    }
+
+    .wish-label{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .wish-title{
+        font-size:clamp(34px, 9vw, 50px);
+        line-height:1.15;
+    }
+
+    .wish-text{
+        width:100%;
+        max-width:420px;
+        font-size:clamp(10px, 2.8vw, 12px);
+        line-height:1.5;
+    }
+
+    .wish-love{
+        font-size:8px;
+        letter-spacing:2px;
+    }
+
+    .memory-gallery{
+        height:54vh;
+        height:54svh;
+        padding:10px 12px 18px;
+    }
+
+    .memory-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+        gap:8px;
+    }
+
+    .memory-caption h3{
+        font-size:clamp(14px, 4vw, 17px);
+    }
+}
+
+@media (max-height: 650px) and (min-width: 601px){
+    .photo{
+        width:min(240px, 28vw);
+        height:min(300px, 56vh);
+    }
+
+    .wish{
+        padding-top:3vh;
+    }
+
+    .wish-title{
+        font-size:clamp(42px, 6vw, 66px);
+    }
+
+    .wish-text{
+        font-size:11px;
+        line-height:1.45;
+        max-width:600px;
+    }
+
+    .memory-gallery{
+        height:52vh;
+        padding-top:8px;
+    }
+
+    .gallery-heading{
+        margin-bottom:8px;
+    }
+
+    .memory-grid{
+        gap:9px;
     }
 }
 
