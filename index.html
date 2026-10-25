@@ -1,1783 +1,2006 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Happy Birthday my dear Sissy... 💗</title>
+    <title>Happy Birthday Sissy 💗</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-<style>
+    <style>
+        .photo-lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 99999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-/* =========================
+        .photo-lightbox.active {
+            display: flex;
+        }
+
+        .photo-lightbox img {
+            max-width: 95%;
+            max-height: 85vh;
+            object-fit: contain;
+            border: 3px solid pink;
+            border-radius: 15px;
+            box-shadow: 0 0 25px hotpink;
+        }
+
+        #lightboxClose {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 40px;
+            color: white;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* =========================
    RESET
 ========================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html,
-body{
-    width:100%;
-    min-height:100%;
-    margin:0;
-    overflow:hidden;
-    background:#050005;
-    font-family:Poppins,sans-serif;
-    -webkit-text-size-adjust:100%;
-}
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            margin: 0;
+            overflow: hidden;
+            background: #050005;
+            font-family: Poppins, sans-serif;
+            -webkit-text-size-adjust: 100%;
+        }
 
-.story{
-    min-height:100vh;
-    min-height:100svh;
-}
+        .story {
+            min-height: 100vh;
+            min-height: 100svh;
+        }
 
-body{
-    color:white;
-}
+        body {
+            color: white;
+        }
 
-/* =========================
+        /* =========================
    MAIN
 ========================= */
 
-.story{
-    position:relative;
-    width:100%;
-    height:100vh;
-    height:100svh;
-    overflow:hidden;
+        .story {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            height: 100svh;
+            overflow: hidden;
 
-    background:
-        radial-gradient(
-            circle at 50% 35%,
-            #52002d 0%,
-            #240016 38%,
-            #090006 75%,
-            #020002 100%
-        );
-}
+            background:
+                radial-gradient(circle at 50% 35%,
+                    #52002d 0%,
+                    #240016 38%,
+                    #090006 75%,
+                    #020002 100%);
+        }
 
-/* dark cinematic overlay */
+        /* dark cinematic overlay */
 
-.story::before{
-    content:"";
-    position:absolute;
-    inset:0;
+        .story::before {
+            content: "";
+            position: absolute;
+            inset: 0;
 
-    background:
-        radial-gradient(
-            circle,
-            transparent 30%,
-            rgba(0,0,0,.72) 100%
-        );
+            background:
+                radial-gradient(circle,
+                    transparent 30%,
+                    rgba(0, 0, 0, .72) 100%);
 
-    z-index:100;
-    pointer-events:none;
-}
+            z-index: 100;
+            pointer-events: none;
+        }
 
-/* =========================
+        /* =========================
    STARS
 ========================= */
 
-.stars{
-    position:absolute;
-    inset:0;
-    z-index:1;
-}
+        .stars {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+        }
 
-.star{
-    position:absolute;
+        .star {
+            position: absolute;
 
-    width:2px;
-    height:2px;
+            width: 2px;
+            height: 2px;
 
-    background:white;
-    border-radius:50%;
+            background: white;
+            border-radius: 50%;
 
-    box-shadow:
-        0 0 8px white,
-        0 0 18px #ff8ac6;
+            box-shadow:
+                0 0 8px white,
+                0 0 18px #ff8ac6;
 
-    animation:
-        twinkle 3s ease-in-out infinite;
-}
+            animation:
+                twinkle 3s ease-in-out infinite;
+        }
 
-@keyframes twinkle{
+        @keyframes twinkle {
 
-    0%,100%{
-        opacity:.15;
-        transform:scale(.5);
-    }
+            0%,
+            100% {
+                opacity: .15;
+                transform: scale(.5);
+            }
 
-    50%{
-        opacity:1;
-        transform:scale(1.8);
-    }
-}
+            50% {
+                opacity: 1;
+                transform: scale(1.8);
+            }
+        }
 
-/* =========================
+        /* =========================
    INTRO
 ========================= */
 
-.intro{
-    position:absolute;
-    inset:0;
+        .intro {
+            position: absolute;
+            inset: 0;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-    z-index:30;
+            z-index: 30;
 
-    animation:
-        introOut
-        4s
-        ease
-        forwards;
-}
+            animation:
+                introOut 4s cubic-bezier(.22, .8, .25, 1) forwards;
+        }
 
-.intro-small{
+        .intro-small {
 
-    font-size:11px;
-    letter-spacing:6px;
+            font-size: 11px;
+            letter-spacing: 6px;
 
-    color:#ffd5e9;
+            color: #ffd5e9;
 
-    text-transform:uppercase;
-}
+            text-transform: uppercase;
+        }
 
-.intro-title{
+        .intro-title {
 
-    margin-top:20px;
+            margin-top: 20px;
 
-    font-family:"Great Vibes",cursive;
+            font-family: "Great Vibes", cursive;
 
-    font-size:clamp(60px,13vw,130px);
+            font-size: clamp(60px, 13vw, 130px);
 
-    line-height:.9;
+            line-height: .9;
 
-    background:
-        linear-gradient(
-            90deg,
-            #fff,
-            #ff8bc8,
-            #fff,
-            #ff4da6,
-            #fff
-        );
+            background:
+                linear-gradient(90deg,
+                    #fff,
+                    #ff8bc8,
+                    #fff,
+                    #ff4da6,
+                    #fff);
 
-    background-size:300%;
+            background-size: 300%;
 
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
 
-    animation:textShine 4s linear infinite;
-}
+            animation: textShine 4s linear infinite;
+        }
 
-@keyframes textShine{
+        @keyframes textShine {
 
-    to{
-        background-position:300%;
-    }
-}
+            to {
+                background-position: 300%;
+            }
+        }
 
-@keyframes introOut{
+        @keyframes introOut {
 
-    0%{
-        opacity:0;
-        transform:scale(.7);
-        filter:blur(15px);
-    }
+            0% {
+                opacity: 0;
+                transform: scale(.7);
+                filter: blur(15px);
+            }
 
-    20%{
-        opacity:1;
-        transform:scale(1);
-        filter:blur(0);
-    }
+            20% {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
 
-    70%{
-        opacity:1;
-    }
+            70% {
+                opacity: 1;
+            }
 
-    100%{
-        opacity:0;
-        transform:scale(1.4);
-        filter:blur(15px);
-    }
-}
+            100% {
+                opacity: 0;
+                transform: scale(1.4);
+                filter: blur(15px);
+            }
+        }
 
-/* =========================
+        /* =========================
    HEART
 ========================= */
 
-.heart{
+        .heart {
 
-    position:absolute;
+            position: absolute;
 
-    width:95px;
-    height:95px;
+            width: 95px;
+            height: 95px;
 
-    left:50%;
-    top:50%;
+            left: 50%;
+            top: 50%;
 
-    transform:
-        translate(-50%,-50%)
-        rotate(-45deg);
+            transform:
+                translate(-50%, -50%) rotate(-45deg);
 
-    background:
-        linear-gradient(
-            135deg,
-            #ff79bd,
-            #ff006e
-        );
+            background:
+                linear-gradient(135deg,
+                    #ff79bd,
+                    #ff006e);
 
-    border-radius:18px;
+            border-radius: 18px;
 
-    z-index:31;
+            z-index: 31;
 
-    opacity:0;
+            opacity: 0;
 
-    box-shadow:
-        0 0 30px #ff1980,
-        0 0 80px #ff1980,
-        0 0 150px rgba(255,0,120,.7);
+            box-shadow:
+                0 0 30px #ff1980,
+                0 0 80px #ff1980,
+                0 0 150px rgba(255, 0, 120, .7);
 
-    animation:
-        heartIntro
-        3s
-        ease
-        1.5s
-        forwards;
-}
+            animation:
+                heartIntro 3s cubic-bezier(.22, .8, .25, 1) 1.5s forwards;
+        }
 
-.heart::before,
-.heart::after{
+        .heart::before,
+        .heart::after {
 
-    content:"";
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    width:95px;
-    height:95px;
+            width: 95px;
+            height: 95px;
 
-    border-radius:50%;
+            border-radius: 50%;
 
-    background:inherit;
-}
+            background: inherit;
+        }
 
-.heart::before{
-    top:-47px;
-    left:0;
-}
+        .heart::before {
+            top: -47px;
+            left: 0;
+        }
 
-.heart::after{
-    top:0;
-    left:47px;
-}
+        .heart::after {
+            top: 0;
+            left: 47px;
+        }
 
-@keyframes heartIntro{
+        @keyframes heartIntro {
 
-    0%{
-        opacity:0;
+            0% {
+                opacity: 0;
 
-        transform:
-            translate(-50%,-50%)
-            rotate(-45deg)
-            scale(.1);
-    }
+                transform:
+                    translate(-50%, -50%) rotate(-45deg) scale(.1);
+            }
 
-    30%{
-        opacity:1;
+            30% {
+                opacity: 1;
 
-        transform:
-            translate(-50%,-50%)
-            rotate(-45deg)
-            scale(1);
-    }
+                transform:
+                    translate(-50%, -50%) rotate(-45deg) scale(1);
+            }
 
-    70%{
-        opacity:1;
-    }
+            70% {
+                opacity: 1;
+            }
 
-    100%{
-        opacity:0;
+            100% {
+                opacity: 0;
 
-        transform:
-            translate(-50%,-50%)
-            rotate(-45deg)
-            scale(1.8);
-    }
-}
+                transform:
+                    translate(-50%, -50%) rotate(-45deg) scale(1.8);
+            }
+        }
 
-/* =========================
+        /* =========================
    HAPPY BIRTHDAY
 ========================= */
 
-.birthday{
+        .birthday {
 
-    position:absolute;
-    inset:0;
+            position: absolute;
+            inset: 0;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
 
-    z-index:25;
+            z-index: 25;
 
-    opacity:0;
+            opacity: 0;
 
-    animation:
-        birthdayShow
-        4s
-        ease
-        3.8s
-        forwards;
-}
+            animation:
+                birthdayShow 4s cubic-bezier(.22, .8, .25, 1) 3.8s forwards;
+        }
 
-.birthday-small{
+        .birthday-small {
 
-    font-size:11px;
-    letter-spacing:5px;
+            font-size: 11px;
+            letter-spacing: 5px;
 
-    color:#ffd9ec;
+            color: #ffd9ec;
 
-    text-transform:uppercase;
-}
+            text-transform: uppercase;
+        }
 
-.birthday-title{
+        .birthday-title {
 
-    margin-top:15px;
+            margin-top: 15px;
 
-    font-family:"Great Vibes",cursive;
+            font-family: "Great Vibes", cursive;
 
-    font-size:clamp(65px,14vw,145px);
+            font-size: clamp(45px, 9vw, 95px);
 
-    color:#fff;
+            color: #fff;
 
-    text-shadow:
-        0 0 15px #ff67b5,
-        0 0 40px #ff1980,
-        0 0 80px rgba(255,0,120,.6);
-}
+            text-shadow:
+                0 0 15px #ff67b5,
+                0 0 40px #ff1980,
+                0 0 80px rgba(255, 0, 120, .6);
+        }
 
-@keyframes birthdayShow{
+        @keyframes birthdayShow {
 
-    0%{
-        opacity:0;
-        transform:scale(.5);
-        filter:blur(20px);
-    }
+            0% {
+                opacity: 0;
+                transform: scale(.5);
+                filter: blur(20px);
+            }
 
-    20%{
-        opacity:1;
-        transform:scale(1);
-        filter:blur(0);
-    }
+            20% {
+                opacity: 1;
+                transform: scale(1);
+                filter: blur(0);
+            }
 
-    70%{
-        opacity:1;
-    }
+            70% {
+                opacity: 1;
+            }
 
-    100%{
-        opacity:0;
-        transform:scale(1.15);
-    }
-}
+            100% {
+                opacity: 0;
+                transform: scale(1.15);
+            }
+        }
 
-/* =========================
+        /* =========================
    PHOTO SLIDER
 ========================= */
 
-.photo-slider{
+        .photo-slider {
 
-    position:absolute;
-    inset:0;
+            position: absolute;
+            inset: 0;
 
-    z-index:10;
+            z-index: 10;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    opacity:0;
+            opacity: 0;
 
-    animation:
-        sliderStart
-        1s
-        ease
-        7.5s
-        forwards;
-}
+            animation:
+                sliderStart 1s ease 7.5s forwards;
+        }
 
-@keyframes sliderStart{
+        @keyframes sliderStart {
 
-    to{
-        opacity:1;
-    }
-}
+            to {
+                opacity: 1;
+            }
+        }
 
-.photo{
+        .photo {
 
-    position:absolute;
+            position: absolute;
+            will-change: transform, opacity;
 
-    width:min(310px,72vw);
-    height:min(420px,62vh);
+            width: min(310px, 72vw);
+            height: min(420px, 62vh);
 
-    border-radius:25px;
+            border-radius: 25px;
 
-    padding:7px;
+            padding: 7px;
 
-    background:
-        linear-gradient(
-            135deg,
-            white,
-            #ff7cbd,
-            white,
-            #ff3f99
-        );
+            background:
+                linear-gradient(135deg,
+                    white,
+                    #ff7cbd,
+                    white,
+                    #ff3f99);
 
-    box-shadow:
-        0 20px 80px rgba(255,0,130,.5),
-        0 0 40px rgba(255,90,170,.4);
+            box-shadow:
+                0 20px 80px rgba(255, 0, 130, .5),
+                0 0 40px rgba(255, 90, 170, .4);
 
-    opacity:0;
+            opacity: 0;
 
-    transform:
-        translateX(100vw)
-        rotate(8deg)
-        scale(.8);
+            transform:
+                translateX(100vw) rotate(8deg) scale(.8);
 
-    overflow:hidden;
-}
+            overflow: hidden;
+        }
 
-.photo img{
+        .photo img {
 
-    width:100%;
-    height:100%;
+            width: 100%;
+            height: 100%;
 
-    display:block;
+            display: block;
 
-    object-fit:cover;
+            object-fit: cover;
 
-    border-radius:20px;
-}
+            border-radius: 20px;
+        }
 
-/* photo timing */
+        /* photo timing */
 
-.photo:nth-child(1){
-    animation:photoOne 2.5s ease 7.5s forwards;
-}
+        .photo:nth-child(1) {
+            animation: photoOne 2.7s cubic-bezier(.22, .8, .25, 1) 7.5s both;
+        }
 
-.photo:nth-child(2){
-    animation:photoTwo 2.5s ease 9.7s forwards;
-}
+        .photo:nth-child(2) {
+            animation: photoTwo 2.7s cubic-bezier(.22, .8, .25, 1) 9.7s both;
+        }
 
-.photo:nth-child(3){
-    animation:photoThree 2.5s ease 11.9s forwards;
-}
+        .photo:nth-child(3) {
+            animation: photoThree 2.7s cubic-bezier(.22, .8, .25, 1) 11.9s both;
+        }
 
-.photo:nth-child(4){
-    animation:photoFour 2.5s ease 14.1s forwards;
-}
+        .photo:nth-child(4) {
+            animation: photoFour 2.7s cubic-bezier(.22, .8, .25, 1) 14.1s both;
+        }
 
-.photo:nth-child(5){
-    animation:photoFive 2.5s ease 16.3s forwards;
-}
+        .photo:nth-child(5) {
+            animation: photoFive 2.7s cubic-bezier(.22, .8, .25, 1) 16.3s both;
+        }
 
-.photo:nth-child(6){
-    animation:photoSix 2.5s ease 18.5s forwards;
-}
+        .photo:nth-child(6) {
+            animation: photoSix 2.7s cubic-bezier(.22, .8, .25, 1) 18.5s both;
+        }
 
-/* LAST PHOTO STOPS — DOES NOT MOVE OUT */
-
-.photo:nth-child(7){
-    animation:photoSeven 3s ease 20.7s forwards;
-}
-
-
-/* first six */
-
-@keyframes photoOne{
-
-    0%{
-        opacity:0;
-        transform:translateX(100vw) rotate(10deg) scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:translateX(0) rotate(-2deg) scale(1);
-    }
-
-    75%{
-        opacity:1;
-        transform:translateX(0) rotate(2deg) scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:translateX(-100vw) rotate(-10deg) scale(.8);
-    }
-}
-
-@keyframes photoTwo{
-
-    0%{
-        opacity:0;
-        transform:translateX(100vw) rotate(10deg) scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:translateX(0) rotate(2deg) scale(1);
-    }
-
-    75%{
-        opacity:1;
-        transform:translateX(0) rotate(-2deg) scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:translateX(-100vw) rotate(-10deg) scale(.8);
-    }
-}
-
-@keyframes photoThree{
-
-    0%{
-        opacity:0;
-        transform:translateX(100vw) rotate(8deg) scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:translateX(0) rotate(-2deg) scale(1);
-    }
-
-    75%{
-        opacity:1;
-        transform:translateX(0) rotate(2deg) scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:translateX(-100vw) rotate(-10deg) scale(.8);
-    }
-}
-
-@keyframes photoFour{
-
-    0%{
-        opacity:0;
-        transform:translateX(100vw) rotate(10deg) scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:translateX(0) rotate(2deg) scale(1);
-    }
-
-    75%{
-        opacity:1;
-        transform:translateX(0) rotate(-2deg) scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:translateX(-100vw) rotate(-10deg) scale(.8);
-    }
-}
-
-@keyframes photoFive{
-
-    0%{
-        opacity:0;
-        transform:translateX(100vw) rotate(10deg) scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:translateX(0) rotate(-2deg) scale(1);
-    }
-
-    75%{
-        opacity:1;
-        transform:translateX(0) rotate(2deg) scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:translateX(-100vw) rotate(-10deg) scale(.8);
-    }
-}
-
-@keyframes photoSix{
-
-    0%{
-        opacity:0;
-        transform:translateX(100vw) rotate(10deg) scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:translateX(0) rotate(2deg) scale(1);
-    }
-
-    75%{
-        opacity:1;
-        transform:translateX(0) rotate(-2deg) scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:translateX(-100vw) rotate(-10deg) scale(.8);
-    }
-}
-
-
-/* LAST PHOTO */
-
-@keyframes photoSeven{
-
-    0%{
-        opacity:0;
-        transform:
-            translateX(100vw)
-            rotate(10deg)
-            scale(.8);
-    }
-
-    15%{
-        opacity:1;
-        transform:
-            translateX(0)
-            rotate(-2deg)
-            scale(1);
-    }
-
-    45%{
-        opacity:1;
-        transform:
-            translateX(0)
-            rotate(2deg)
-            scale(1.03);
-    }
-
-    100%{
-        opacity:0;
-        transform:
-            translateX(0)
-            rotate(0)
-            scale(.9);
-    }
-}
-
-
-/* =========================
+        /* LAST PHOTO STOPS — DOES NOT MOVE OUT */
+
+        .photo:nth-child(7) {
+            animation: photoSeven 3.2s cubic-bezier(.22, .8, .25, 1) 20.7s both;
+        }
+
+
+        /* first six */
+
+        @keyframes photoOne {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100vw) rotate(10deg) scale(.8);
+            }
+
+            22% {
+                opacity: 1;
+                transform: translateX(0) rotate(-1deg) scale(1);
+            }
+
+            78% {
+                opacity: 1;
+                transform: translateX(0) rotate(1deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100vw) rotate(-10deg) scale(.8);
+            }
+        }
+
+        @keyframes photoTwo {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100vw) rotate(10deg) scale(.8);
+            }
+
+            22% {
+                opacity: 1;
+                transform: translateX(0) rotate(1deg) scale(1);
+            }
+
+            78% {
+                opacity: 1;
+                transform: translateX(0) rotate(-1deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100vw) rotate(-10deg) scale(.8);
+            }
+        }
+
+        @keyframes photoThree {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100vw) rotate(8deg) scale(.8);
+            }
+
+            22% {
+                opacity: 1;
+                transform: translateX(0) rotate(-1deg) scale(1);
+            }
+
+            78% {
+                opacity: 1;
+                transform: translateX(0) rotate(1deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100vw) rotate(-10deg) scale(.8);
+            }
+        }
+
+        @keyframes photoFour {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100vw) rotate(10deg) scale(.8);
+            }
+
+            22% {
+                opacity: 1;
+                transform: translateX(0) rotate(1deg) scale(1);
+            }
+
+            78% {
+                opacity: 1;
+                transform: translateX(0) rotate(-1deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100vw) rotate(-10deg) scale(.8);
+            }
+        }
+
+        @keyframes photoFive {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100vw) rotate(10deg) scale(.8);
+            }
+
+            22% {
+                opacity: 1;
+                transform: translateX(0) rotate(-1deg) scale(1);
+            }
+
+            78% {
+                opacity: 1;
+                transform: translateX(0) rotate(1deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100vw) rotate(-10deg) scale(.8);
+            }
+        }
+
+        @keyframes photoSix {
+
+            0% {
+                opacity: 0;
+                transform: translateX(100vw) rotate(10deg) scale(.8);
+            }
+
+            22% {
+                opacity: 1;
+                transform: translateX(0) rotate(1deg) scale(1);
+            }
+
+            78% {
+                opacity: 1;
+                transform: translateX(0) rotate(-1deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateX(-100vw) rotate(-10deg) scale(.8);
+            }
+        }
+
+
+        /* LAST PHOTO */
+
+        @keyframes photoSeven {
+
+            0% {
+                opacity: 0;
+                transform:
+                    translateX(100vw) rotate(10deg) scale(.8);
+            }
+
+            15% {
+                opacity: 1;
+                transform:
+                    translateX(0) rotate(-2deg) scale(1);
+            }
+
+            25% {
+                opacity: 1;
+                transform:
+                    translateX(0) rotate(-1deg) scale(1);
+            }
+
+            70% {
+                opacity: 1;
+                transform:
+                    translateX(0) rotate(0deg) scale(1.015);
+            }
+
+            100% {
+                opacity: 0;
+                transform:
+                    translateX(0) rotate(0) scale(1.02);
+            }
+        }
+
+
+        /* =========================
    BIRTHDAY WISH
 ========================= */
 
-.wish{
+        .wish {
 
-    position:absolute;
+            position: absolute;
 
-    inset:0;
+            inset: 0;
 
-    z-index:45;
+            z-index: 45;
 
-    display:flex;
+            display: flex;
 
-    justify-content:flex-start;
-    align-items:center;
+            justify-content: flex-start;
+            align-items: center;
 
-    flex-direction:column;
+            flex-direction: column;
 
-    text-align:center;
+            text-align: center;
 
-    padding-top:7vh;
+            padding-top: 7vh;
 
-    opacity:0;
+            opacity: 0;
 
-    pointer-events:none;
+            pointer-events: none;
 
-    animation:
-        wishShow
-        4s
-        ease
-        24s
-        forwards;
-}
+            animation:
+                wishShow 4s cubic-bezier(.22, .8, .25, 1) 24s forwards;
+        }
 
-.wish-label{
+        .wish-label {
 
-    font-size:10px;
+            font-size: 10px;
 
-    letter-spacing:5px;
+            letter-spacing: 5px;
 
-    color:#ff9dcc;
+            color: #ff9dcc;
 
-    text-transform:uppercase;
-}
+            text-transform: uppercase;
+        }
 
-.wish-title{
+        .wish-title {
 
-    margin-top:5px;
+            margin-top: 5px;
 
-    font-family:"Great Vibes",cursive;
+            font-family: "Great Vibes", cursive;
 
-    font-size:
-        clamp(50px,9vw,90px);
+            font-size:
+                clamp(50px, 9vw, 90px);
 
-    color:white;
+            color: white;
 
-    text-shadow:
-        0 0 15px #ff4fa5,
-        0 0 40px #ff1681;
-}
+            text-shadow:
+                0 0 15px #ff4fa5,
+                0 0 40px #ff1681;
+        }
 
-.wish-text{
+        .wish-text {
 
-    width:90%;
-    max-width:650px;
+            width: 90%;
+            max-width: 650px;
 
-    margin-top:5px;
+            margin-top: 5px;
 
-    font-size:13px;
+            font-size: 13px;
 
-    line-height:1.7;
+            line-height: 1.7;
 
-    color:#ffe5f1;
-}
+            color: #ffe5f1;
+        }
 
-.wish-love{
+        .wish-love {
 
-    margin-top:10px;
+            margin-top: 10px;
 
-    font-size:9px;
+            font-size: 9px;
 
-    letter-spacing:4px;
+            letter-spacing: 4px;
 
-    color:#ff8ac6;
+            color: #ff8ac6;
 
-    text-transform:uppercase;
-}
+            text-transform: uppercase;
+        }
 
-@keyframes wishShow{
+        @keyframes wishShow {
 
-    0%{
-        opacity:0;
-        transform:translateY(30px) scale(.95);
-        filter:blur(10px);
-    }
+            0% {
+                opacity: 0;
+                transform: translateY(30px) scale(.95);
+                filter: blur(10px);
+            }
 
-    20%{
-        opacity:1;
-        transform:translateY(0) scale(1);
-        filter:blur(0);
-    }
+            20% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+                filter: blur(0);
+            }
 
-    100%{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-}
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
 
 
-/* =========================
+        /* =========================
    BEST MEMORIES
 ========================= */
 
-.memory-gallery{
+        .memory-gallery {
 
-    position:absolute;
+            position: absolute;
 
-    left:0;
-    right:0;
-    bottom:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
 
-    height:58vh;
+            height: 58vh;
 
-    z-index:50;
+            z-index: 50;
 
-    padding:
-        15px
-        5vw
-        25px;
+            padding:
+                15px 5vw 25px;
 
-    overflow-y:auto;
-    overflow-x:hidden;
+            overflow-y: auto;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
 
-    opacity:0;
-    visibility:hidden;
+            opacity: 0;
+            visibility: hidden;
 
-    background:
-        linear-gradient(
-            180deg,
-            transparent,
-            rgba(15,0,10,.85) 18%,
-            rgba(5,0,5,.98)
-        );
+            background:
+                linear-gradient(180deg,
+                    transparent,
+                    rgba(15, 0, 10, .85) 18%,
+                    rgba(5, 0, 5, .98));
 
-    animation:
-        galleryShow
-        2s
-        ease
-        24.7s
-        forwards;
+            animation:
+                galleryShow 2s cubic-bezier(.22, .8, .25, 1) 24.7s forwards;
 
-    scrollbar-width:none;
-}
+            scrollbar-width: none;
+        }
 
-.memory-gallery::-webkit-scrollbar{
-    display:none;
-}
+        .memory-gallery::-webkit-scrollbar {
+            display: none;
+        }
 
-.gallery-heading{
+        .gallery-heading {
 
-    text-align:center;
+            text-align: center;
 
-    margin-bottom:15px;
-}
+            margin-bottom: 15px;
+        }
 
-.gallery-mini{
+        .gallery-mini {
 
-    font-size:8px;
+            font-size: 8px;
 
-    letter-spacing:4px;
+            letter-spacing: 4px;
 
-    color:#ff8fc7;
+            color: #ff8fc7;
 
-    text-transform:uppercase;
-}
+            text-transform: uppercase;
+        }
 
-.gallery-title{
+        .gallery-title {
 
-    font-family:"Great Vibes",cursive;
+            font-family: "Great Vibes", cursive;
 
-    font-size:
-        clamp(35px,6vw,60px);
+            font-size:
+                clamp(35px, 6vw, 60px);
 
-    color:white;
+            color: white;
 
-    text-shadow:
-        0 0 15px #ff4fa5,
-        0 0 30px #ff1681;
-}
+            text-shadow:
+                0 0 15px #ff4fa5,
+                0 0 30px #ff1681;
+        }
 
-.gallery-line{
+        .gallery-line {
 
-    width:60px;
-    height:2px;
+            width: 60px;
+            height: 2px;
 
-    margin:6px auto;
+            margin: 6px auto;
 
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            #ff6bb4,
-            transparent
-        );
+            background:
+                linear-gradient(90deg,
+                    transparent,
+                    #ff6bb4,
+                    transparent);
 
-    box-shadow:0 0 12px #ff4fa5;
-}
+            box-shadow: 0 0 12px #ff4fa5;
+        }
 
-.memory-grid{
+        .memory-grid {
 
-    width:min(1100px,100%);
+            width: min(1100px, 100%);
 
-    margin:auto;
+            margin: auto;
 
-    display:grid;
+            display: grid;
 
-    grid-template-columns:
-        repeat(4,1fr);
+            grid-template-columns:
+                repeat(4, 1fr);
 
-    gap:15px;
+            gap: 15px;
 
-    padding-bottom:20px;
-}
+            padding-bottom: 20px;
+        }
 
-.memory-card{
+        .memory-card {
 
-    position:relative;
+            position: relative;
 
-    padding:5px;
+            padding: 5px;
 
-    border-radius:18px;
+            border-radius: 18px;
 
-    background:
-        linear-gradient(
-            135deg,
-            white,
-            #ff4fa5,
-            white
-        );
+            background:
+                linear-gradient(135deg,
+                    white,
+                    #ff4fa5,
+                    white);
 
-    box-shadow:
-        0 12px 35px rgba(0,0,0,.5),
-        0 0 20px rgba(255,50,150,.25);
+            box-shadow:
+                0 12px 35px rgba(0, 0, 0, .5),
+                0 0 20px rgba(255, 50, 150, .25);
 
-    opacity:0;
+            opacity: 0;
 
-    transform:
-        translateY(50px)
-        scale(.85);
+            transform:
+                translateY(50px) scale(.85);
 
-    animation:
-        cardReveal
-        .8s
-        ease
-        forwards;
-}
+            animation:
+                cardReveal .9s cubic-bezier(.22, .8, .25, 1) forwards;
+        }
 
-.memory-card:nth-child(1){
-    animation-delay:24.9s;
-}
+        .memory-card:nth-child(1) {
+            animation-delay: 24.9s;
+        }
 
-.memory-card:nth-child(2){
-    animation-delay:25.05s;
-}
+        .memory-card:nth-child(2) {
+            animation-delay: 25.05s;
+        }
 
-.memory-card:nth-child(3){
-    animation-delay:25.2s;
-}
+        .memory-card:nth-child(3) {
+            animation-delay: 25.2s;
+        }
 
-.memory-card:nth-child(4){
-    animation-delay:25.35s;
-}
+        .memory-card:nth-child(4) {
+            animation-delay: 25.35s;
+        }
 
-.memory-card:nth-child(5){
-    animation-delay:25.5s;
-}
+        .memory-card:nth-child(5) {
+            animation-delay: 25.5s;
+        }
 
-.memory-card:nth-child(6){
-    animation-delay:25.65s;
-}
+        .memory-card:nth-child(6) {
+            animation-delay: 25.65s;
+        }
 
-.memory-card:nth-child(7){
-    animation-delay:25.8s;
-}
+        .memory-card:nth-child(7) {
+            animation-delay: 25.8s;
+        }
 
-.memory-image{
+        .memory-image {
 
-    position:relative;
+            position: relative;
 
-    aspect-ratio:4/5;
+            aspect-ratio: 4/5;
 
-    overflow:hidden;
+            overflow: hidden;
 
-    border-radius:14px;
+            border-radius: 14px;
 
-    background:#16000d;
-}
+            background: #16000d;
+        }
 
-.memory-image img{
+        .memory-image img {
 
-    width:100%;
-    height:100%;
+            width: 100%;
+            height: 100%;
 
-    display:block;
+            display: block;
 
-    object-fit:cover;
+            object-fit: cover;
 
-    transition:
-        transform .7s ease;
-}
+            transition:
+                transform .7s ease;
+        }
 
-.memory-image::after{
+        .memory-image::after {
 
-    content:"";
+            content: "";
 
-    position:absolute;
+            position: absolute;
 
-    inset:0;
+            inset: 0;
 
-    background:
-        linear-gradient(
-            180deg,
-            transparent 55%,
-            rgba(0,0,0,.5)
-        );
-}
+            background:
+                linear-gradient(180deg,
+                    transparent 55%,
+                    rgba(0, 0, 0, .5));
+        }
 
-.memory-number{
+        .memory-number {
 
-    position:absolute;
+            position: absolute;
 
-    top:8px;
-    left:8px;
+            top: 8px;
+            left: 8px;
 
-    width:25px;
-    height:25px;
+            width: 25px;
+            height: 25px;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-    border-radius:50%;
+            border-radius: 50%;
 
-    background:
-        rgba(255,255,255,.16);
+            background:
+                rgba(255, 255, 255, .16);
 
-    border:
-        1px solid rgba(255,255,255,.7);
+            border:
+                1px solid rgba(255, 255, 255, .7);
 
-    backdrop-filter:blur(8px);
+            backdrop-filter: blur(8px);
 
-    font-size:8px;
+            font-size: 8px;
 
-    z-index:5;
-}
+            z-index: 5;
+        }
 
-.memory-caption{
+        .memory-caption {
 
-    padding:
-        7px
-        3px
-        5px;
+            padding:
+                7px 3px 5px;
 
-    text-align:center;
-}
+            text-align: center;
+        }
 
-.memory-caption span{
+        .memory-caption span {
 
-    display:block;
+            display: block;
 
-    font-size:5px;
+            font-size: 5px;
 
-    letter-spacing:2px;
+            letter-spacing: 2px;
 
-    color:#ff82bd;
-}
+            color: #ff82bd;
+        }
 
-.memory-caption h3{
+        .memory-caption h3 {
 
-    margin-top:2px;
+            margin-top: 2px;
 
-    font-family:"Great Vibes",cursive;
+            font-family: "Great Vibes", cursive;
 
-    font-size:20px;
+            font-size: 20px;
 
-    font-weight:400;
+            font-weight: 400;
 
-    color:white;
-}
+            color: white;
+        }
 
-.memory-card:hover{
+        .memory-card:hover {
 
-    transform:
-        translateY(-6px)
-        scale(1.03);
+            transform:
+                translateY(-6px) scale(1.03);
 
-    box-shadow:
-        0 20px 50px rgba(255,0,130,.35);
-}
+            box-shadow:
+                0 20px 50px rgba(255, 0, 130, .35);
+        }
 
-.memory-card:hover img{
+        .memory-card:hover img {
 
-    transform:scale(1.08);
-}
+            transform: scale(1.08);
+        }
 
-@keyframes cardReveal{
+        @keyframes cardReveal {
 
-    from{
+            from {
 
-        opacity:0;
+                opacity: 0;
 
-        transform:
-            translateY(50px)
-            scale(.85);
-    }
+                transform:
+                    translateY(50px) scale(.85);
+            }
 
-    to{
+            to {
 
-        opacity:1;
+                opacity: 1;
 
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
+                transform:
+                    translateY(0) scale(1);
+            }
+        }
 
-@keyframes galleryShow{
+        @keyframes galleryShow {
 
-    0%{
-        opacity:0;
-        visibility:hidden;
-    }
+            0% {
+                opacity: 0;
+                visibility: hidden;
+            }
 
-    100%{
-        opacity:1;
-        visibility:visible;
-    }
-}
+            100% {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
 
 
-/* =========================
+        /* Birthday letter below the memory photos */
+        .birthday-letter {
+            width: min(100%, 950px);
+            margin: 18px auto 12px;
+            padding: clamp(16px, 3vw, 30px);
+            border: 1px solid rgba(255, 135, 198, .35);
+            border-radius: 22px;
+            background: linear-gradient(145deg, rgba(80, 0, 43, .78), rgba(18, 0, 14, .88));
+            box-shadow: 0 12px 40px rgba(255, 0, 130, .16), inset 0 0 24px rgba(255, 105, 180, .06);
+            color: #ffeaf4;
+            font-size: clamp(12px, 1.35vw, 15px);
+            line-height: 1.85;
+            text-align: center;
+            overflow-wrap: anywhere;
+            animation: letterReveal 1.1s cubic-bezier(.22, .8, .25, 1) both;
+        }
+
+        .birthday-letter p {
+            margin: 0 0 15px;
+        }
+
+        .birthday-letter .letter-heading {
+            color: #fff;
+            font-size: clamp(17px, 2.5vw, 25px);
+            line-height: 1.5;
+            text-shadow: 0 0 16px rgba(255, 75, 165, .75);
+        }
+
+        .birthday-letter .letter-ending {
+            color: #ffacd5;
+            font-size: clamp(14px, 1.8vw, 18px);
+        }
+
+        .birthday-letter .letter-hashtags {
+            margin-bottom: 0;
+            color: #ff9dcc;
+            font-size: clamp(10px, 1.2vw, 13px);
+            letter-spacing: .2px;
+        }
+
+        @keyframes letterReveal {
+            from {
+                opacity: 0;
+                transform: translateY(22px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* =========================
    FLOATING HEARTS
 ========================= */
 
-.floating-heart{
+        .floating-heart {
 
-    position:absolute;
+            position: absolute;
 
-    bottom:-50px;
+            bottom: -50px;
 
-    z-index:90;
+            z-index: 90;
 
-    color:#ff6db5;
+            color: #ff6db5;
 
-    text-shadow:
-        0 0 15px #ff1681;
+            text-shadow:
+                0 0 15px #ff1681;
 
-    pointer-events:none;
+            pointer-events: none;
 
-    animation:
-        floatHeart
-        6s
-        linear
-        forwards;
-}
+            animation:
+                floatHeart 6s linear forwards;
+        }
 
-@keyframes floatHeart{
+        @keyframes floatHeart {
 
-    0%{
-        opacity:0;
-        transform:
-            translateY(0)
-            scale(.5)
-            rotate(0);
-    }
+            0% {
+                opacity: 0;
+                transform:
+                    translateY(0) scale(.5) rotate(0);
+            }
 
-    15%{
-        opacity:1;
-    }
+            15% {
+                opacity: 1;
+            }
 
-    100%{
-        opacity:0;
+            100% {
+                opacity: 0;
 
-        transform:
-            translateY(-110vh)
-            translateX(var(--move))
-            scale(1.5)
-            rotate(360deg);
-    }
-}
+                transform:
+                    translateY(-110vh) translateX(var(--move)) scale(1.5) rotate(360deg);
+            }
+        }
 
 
-/* =========================
+        /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:900px){
+        @media(max-width:900px) {
 
-    .memory-grid{
-        grid-template-columns:
-            repeat(3,1fr);
+            .memory-grid {
+                grid-template-columns:
+                    repeat(3, 1fr);
 
-        gap:10px;
-    }
+                gap: 10px;
+            }
 
-    .memory-gallery{
-        height:57vh;
-        padding:12px 15px 20px;
-    }
+            .memory-gallery {
+                height: 57vh;
+                padding: 12px 15px 20px;
+            }
 
-    .memory-caption h3{
-        font-size:17px;
-    }
-}
+            .memory-caption h3 {
+                font-size: 17px;
+            }
+        }
 
-@media(max-width:600px){
+        @media(max-width:600px) {
 
-    .wish{
-        padding-top:5vh;
-    }
+            .wish {
+                padding-top: 5vh;
+            }
 
-    .wish-title{
-        font-size:50px;
-    }
+            .wish-title {
+                font-size: 50px;
+            }
 
-    .wish-text{
-        font-size:11px;
-        line-height:1.6;
-    }
+            .wish-text {
+                font-size: 11px;
+                line-height: 1.6;
+            }
 
-    .memory-gallery{
-        height:56vh;
-    }
+            .memory-gallery {
+                height: 56vh;
+            }
 
-    .memory-grid{
-        grid-template-columns:
-            repeat(2,1fr);
+            .memory-grid {
+                grid-template-columns:
+                    repeat(2, 1fr);
 
-        gap:9px;
-    }
+                gap: 9px;
+            }
 
-    .memory-card{
-        padding:4px;
-        border-radius:14px;
-    }
+            .memory-card {
+                padding: 4px;
+                border-radius: 14px;
+            }
 
-    .memory-image{
-        border-radius:10px;
-    }
+            .memory-image {
+                border-radius: 10px;
+            }
 
-    .memory-caption h3{
-        font-size:17px;
-    }
+            .memory-caption h3 {
+                font-size: 17px;
+            }
 
-    .gallery-title{
-        font-size:45px;
-    }
-}
+            .gallery-title {
+                font-size: 45px;
+            }
+        }
 
 
 
-/* Extra responsive tuning for phones, tablets and laptop screens */
-.photo{
-    width:min(310px, 72vw, 38vh);
-    height:min(420px, 62vh, 110vw);
-}
+        /* Extra responsive tuning for phones, tablets and laptop screens */
+        .photo {
+            width: min(310px, 72vw, 38vh);
+            height: min(420px, 62vh, 110vw);
+        }
 
-@media (max-width: 600px){
-    .intro-small,
-    .birthday-small{
-        max-width:90vw;
-        text-align:center;
-        font-size:9px;
-        letter-spacing:3px;
-        line-height:1.6;
-    }
+        @media (max-width: 600px) {
 
-    .intro-title{
-        max-width:94vw;
-        text-align:center;
-        font-size:clamp(48px, 15vw, 78px);
-    }
+            .intro-small,
+            .birthday-small {
+                max-width: 90vw;
+                text-align: center;
+                font-size: 9px;
+                letter-spacing: 3px;
+                line-height: 1.6;
+            }
 
-    .heart{
-        transform:translate(-50%,-50%) rotate(-45deg) scale(.72);
-    }
+            .intro-title {
+                max-width: 94vw;
+                text-align: center;
+                font-size: clamp(48px, 15vw, 78px);
+            }
 
-    .birthday-title{
-        max-width:95vw;
-        text-align:center;
-        font-size:clamp(48px, 13vw, 76px);
-    }
+            .heart {
+                transform: translate(-50%, -50%) rotate(-45deg) scale(.72);
+            }
 
-    .photo{
-        width:min(72vw, 34vh);
-        height:min(48vh, 112vw);
-        padding:5px;
-        border-radius:18px;
-    }
+            .birthday-title {
+                max-width: 95vw;
+                text-align: center;
+                font-size: clamp(48px, 13vw, 76px);
+            }
 
-    .photo img{
-        border-radius:14px;
-    }
+            .photo {
+                width: min(72vw, 34vh);
+                height: min(48vh, 112vw);
+                padding: 5px;
+                border-radius: 18px;
+            }
 
-    .wish{
-        padding:4vh 12px 0;
-    }
+            .photo img {
+                border-radius: 14px;
+            }
 
-    .wish-label{
-        font-size:8px;
-        letter-spacing:2px;
-    }
+            .wish {
+                padding: 4vh 12px 0;
+            }
 
-    .wish-title{
-        font-size:clamp(34px, 9vw, 50px);
-        line-height:1.15;
-    }
+            .wish-label {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
 
-    .wish-text{
-        width:100%;
-        max-width:420px;
-        font-size:clamp(10px, 2.8vw, 12px);
-        line-height:1.5;
-    }
+            .wish-title {
+                font-size: clamp(34px, 9vw, 50px);
+                line-height: 1.15;
+            }
 
-    .wish-love{
-        font-size:8px;
-        letter-spacing:2px;
-    }
+            .wish-text {
+                width: 100%;
+                max-width: 420px;
+                font-size: clamp(10px, 2.8vw, 12px);
+                line-height: 1.5;
+            }
 
-    .memory-gallery{
-        height:54vh;
-        height:54svh;
-        padding:10px 12px 18px;
-    }
+            .wish-love {
+                font-size: 8px;
+                letter-spacing: 2px;
+            }
 
-    .memory-grid{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-        gap:8px;
-    }
+            .memory-gallery {
+                height: 54vh;
+                height: 54svh;
+                padding: 10px 12px 18px;
+            }
 
-    .memory-caption h3{
-        font-size:clamp(14px, 4vw, 17px);
-    }
-}
+            .memory-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 8px;
+            }
 
-@media (max-height: 650px) and (min-width: 601px){
-    .photo{
-        width:min(240px, 28vw);
-        height:min(300px, 56vh);
-    }
+            .memory-caption h3 {
+                font-size: clamp(14px, 4vw, 17px);
+            }
 
-    .wish{
-        padding-top:3vh;
-    }
+            .birthday-letter {
+                padding: 15px 13px;
+                border-radius: 16px;
+                line-height: 1.75;
+            }
 
-    .wish-title{
-        font-size:clamp(42px, 6vw, 66px);
-    }
+            .birthday-letter p {
+                margin-bottom: 12px;
+            }
+        }
 
-    .wish-text{
-        font-size:11px;
-        line-height:1.45;
-        max-width:600px;
-    }
+        @media (max-height: 650px) and (min-width: 601px) {
+            .photo {
+                width: min(240px, 28vw);
+                height: min(300px, 56vh);
+            }
 
-    .memory-gallery{
-        height:52vh;
-        padding-top:8px;
-    }
+            .wish {
+                padding-top: 3vh;
+            }
 
-    .gallery-heading{
-        margin-bottom:8px;
-    }
+            .wish-title {
+                font-size: clamp(42px, 6vw, 66px);
+            }
 
-    .memory-grid{
-        gap:9px;
-    }
-}
+            .wish-text {
+                font-size: 11px;
+                line-height: 1.45;
+                max-width: 600px;
+            }
 
-</style>
+            .memory-gallery {
+                height: 52vh;
+                padding-top: 8px;
+            }
+
+            .gallery-heading {
+                margin-bottom: 8px;
+            }
+
+            .memory-grid {
+                gap: 9px;
+            }
+        }
+    
+        /* Mobile layout fix: keep the original design and animations,
+           but let the wish, memory gallery and letter flow vertically. */
+        @media (max-width: 600px) {
+            html,
+            body {
+                width: 100%;
+                min-height: 100%;
+                height: auto;
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            .story {
+                width: 100%;
+                height: auto;
+                min-height: 100vh;
+                min-height: 100svh;
+                overflow: hidden;
+                padding-bottom: 18px;
+            }
+
+            .story::before {
+                position: fixed;
+                pointer-events: none;
+            }
+
+            .intro,
+            .birthday,
+            .photo-slider {
+                height: 100vh;
+                height: 100svh;
+            }
+
+            .wish {
+                position: relative;
+                inset: auto;
+                width: 100%;
+                min-height: 34svh;
+                padding: 4vh 14px 18px;
+                margin-top: 100svh;
+                margin-top: 100svh;
+                justify-content: center;
+            }
+
+            .wish-title {
+                max-width: 100%;
+                font-size: clamp(34px, 9vw, 50px);
+            }
+
+            .wish-text {
+                width: 100%;
+                max-width: 420px;
+                font-size: clamp(12px, 3.2vw, 14px);
+                line-height: 1.6;
+            }
+
+            .memory-gallery {
+                position: relative;
+                inset: auto;
+                width: 100%;
+                height: auto;
+                max-height: none;
+                margin-top: 18px;
+                padding: 18px 12px 22px;
+                overflow: visible;
+                opacity: 0;
+                visibility: hidden;
+                background: linear-gradient(180deg,
+                    rgba(15, 0, 10, .72),
+                    rgba(5, 0, 5, .98));
+            }
+
+            .memory-grid {
+                width: 100%;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 10px;
+            }
+
+            .memory-card {
+                min-width: 0;
+            }
+
+            .memory-caption span {
+                font-size: 7px;
+                letter-spacing: 1px;
+            }
+
+            .memory-caption h3 {
+                font-size: clamp(14px, 4vw, 17px);
+            }
+
+            .birthday-letter {
+                width: 100%;
+                margin: 18px auto 0;
+                padding: 16px 13px;
+                font-size: 13px;
+                line-height: 1.75;
+                overflow-wrap: anywhere;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 900px) {
+            html,
+            body {
+                overflow-x: hidden;
+                overflow-y: auto;
+            }
+
+            .story {
+                height: auto;
+                min-height: 100vh;
+                min-height: 100svh;
+                overflow: hidden;
+                padding-bottom: 18px;
+            }
+
+            .wish {
+                position: relative;
+                inset: auto;
+                min-height: 30svh;
+                margin-top: 100svh;
+                padding: 4vh 20px 18px;
+            }
+
+            .memory-gallery {
+                position: relative;
+                inset: auto;
+                height: auto;
+                max-height: none;
+                margin-top: 18px;
+                overflow: visible;
+            }
+        }
+
+    </style>
 </head>
 
 
 <body>
 
-<div class="story">
+    <div class="story">
 
-    <!-- STARS -->
+        <!-- STARS -->
 
-    <div class="stars" id="stars"></div>
+        <div class="stars" id="stars"></div>
 
 
-    <!-- INTRO -->
+        <!-- INTRO -->
 
-    <div class="intro">
+        <div class="intro">
 
-        <div class="intro-small">
-            A Little Story Made With Love
+            <div class="intro-small">
+                A Little Story Made With Love
+            </div>
+
+            <div class="intro-title">
+                Someone Special...
+            </div>
+
         </div>
 
-        <div class="intro-title">
-            Someone Special...
+
+        <!-- HEART -->
+
+        <div class="heart"></div>
+
+
+        <!-- HAPPY BIRTHDAY -->
+
+        <div class="birthday">
+
+            <div class="birthday-small">
+                Today Is Your Special Day
+            </div>
+
+            <div class="birthday-title">
+                Happy Birthday Sissy... 💗
+            </div>
+
         </div>
+
+
+        <!-- PHOTO SLIDESHOW -->
+
+        <div class="photo-slider">
+
+            <div class="photo">
+                <img src="photo7.jpg" alt="Memory 1">
+            </div>
+
+            <div class="photo">
+                <img src="photo1.jpg" alt="Memory 2">
+            </div>
+
+            <div class="photo">
+                <img src="photo3.jpg" alt="Memory 3">
+            </div>
+
+            <div class="photo">
+                <img src="photo4.jpg" alt="Memory 4">
+            </div>
+
+            <div class="photo">
+                <img src="photo5.jpg" alt="Memory 5">
+            </div>
+
+            <div class="photo">
+                <img src="photo6.jpg" alt="Memory 6">
+            </div>
+
+            <div class="photo">
+                <img src="photo2.jpg" alt="Memory 7">
+            </div>
+
+        </div>
+
+
+        <!-- BIRTHDAY WISH -->
+
+        <div class="wish">
+
+            <div class="wish-label">
+                A Special Message For You
+            </div>
+
+            <div class="wish-title">
+                Happy Birthday Sissy... 💗
+            </div>
+
+            <div class="wish-text">
+
+                May your life always be filled with
+                happiness, love, beautiful memories,
+                endless smiles and wonderful moments.
+                Keep shining and keep smiling always. ✨
+
+            </div>
+
+            <div class="wish-love">
+                Made With ❤️ Just For You
+            </div>
+
+        </div>
+
+
+        <!-- BEST MEMORIES -->
+
+        <section class="memory-gallery">
+
+            <div class="gallery-heading">
+
+                <div class="gallery-mini">
+                    A Collection Of
+                </div>
+
+                <div class="gallery-title">
+                    Best Memories
+                </div>
+
+                <div class="gallery-line"></div>
+
+            </div>
+
+
+            <div class="memory-grid">
+
+
+                <!-- MEMORY 1 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo7.jpg">
+
+                        <div class="memory-number">
+                            01
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Beautiful Moments ✨
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 2 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo1.jpg">
+
+                        <div class="memory-number">
+                            02
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Forever Smiles 💗
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 3 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo3.jpg">
+
+                        <div class="memory-number">
+                            03
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Little Moments ✨
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 4 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo4.jpg">
+
+                        <div class="memory-number">
+                            04
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Pure Happiness 🌸
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 5 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo5.jpg">
+
+                        <div class="memory-number">
+                            05
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Moments To Remember 💕
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 6 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo6.jpg">
+
+                        <div class="memory-number">
+                            06
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Our Beautiful Story 💖
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MEMORY 7 -->
+
+                <div class="memory-card">
+
+                    <div class="memory-image">
+
+                        <img src="photo2.jpg">
+
+                        <div class="memory-number">
+                            07
+                        </div>
+
+                    </div>
+
+                    <div class="memory-caption">
+
+                        <span>BEST MEMORY</span>
+
+                        <h3>
+                            Always Special ✨
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <!-- LONG BIRTHDAY MESSAGE BELOW THE MEMORY PHOTOS -->
+            <div class="birthday-letter">
+                <p class="letter-heading">🎀💗 <strong>Happy Birthday to my Sissy...!!</strong> 💗🎂✨</p>
+                <p>You are not just my sister, you are my built-in best friend, my forever partner in crime, my comfort
+                    person, and one of the most beautiful blessings life has ever given me. 🥹🫶🏻💕 From our silly
+                    fights to our endless laughs, from our little secrets to our unforgettable memories, every moment
+                    with you is a special piece of my heart. 🎀🦋</p>
+                <p>No matter how much we grow up or how much life changes, you will always be my favourite person to
+                    annoy, my safest place to run to, and the one I will love a little extra every single day. 🧸💞 I
+                    hope your life is always filled with the kind of happiness that makes your eyes sparkle, the kind of
+                    love that makes your heart feel full, and the kind of dreams that come true one by one. 🌷✨</p>
+                <p>You deserve all the love, magic, laughter, and beautiful things this world has to offer, my girl.
+                    Never stop smiling, never stop shining, and never forget how incredibly special you are to me. 🥹💖
+                </p>
+                <p><strong>Happy Birthday, my forever little piece of happiness!</strong> 👑🎂💗 No matter how many
+                    birthdays pass, you will always be my precious Sissy, my favourite human, and a part of my heart
+                    that nobody could ever replace. I love you to the moon and back, today, tomorrow, and in every
+                    lifetime. 🌙🫂💋</p>
+                <p class="letter-ending"><strong>My sister by chance, my best friend by choice, my soulmate by
+                        heart....</strong> 🎀💗♾️</p>
+                <!-- <p class="letter-hashtags">#HappyBirthdaySissy #SisterLove #ForeverMyBestie #MyFavouriteHuman #BirthdayGirl 🎂🦋💕</p> -->
+            </div>
+
+        </section>
 
     </div>
-
-
-    <!-- HEART -->
-
-    <div class="heart"></div>
-
-
-    <!-- HAPPY BIRTHDAY -->
-
-    <div class="birthday">
-
-        <div class="birthday-small">
-            Today Is Your Special Day
-        </div>
-
-        <div class="birthday-title">
-            Happy Birthday my dear sissy...
-        </div>
-
+    <div class="photo-lightbox" id="photoLightbox">
+        <button id="lightboxClose" type="button">&times;</button>
+        <img id="lightboxImage" src="" alt="Best Memory">
     </div>
 
+    <script>
 
-    <!-- PHOTO SLIDESHOW -->
 
-    <div class="photo-slider">
 
-        <div class="photo">
-            <img src="photo1.jpg" alt="Memory 1">
-        </div>
 
-        <div class="photo">
-            <img src="photo2.jpg" alt="Memory 2">
-        </div>
+        /* =========================
+           STARS
+        ========================= */
 
-        <div class="photo">
-            <img src="photo3.jpg" alt="Memory 3">
-        </div>
+        const stars =
+            document.getElementById("stars");
 
-        <div class="photo">
-            <img src="photo4.jpg" alt="Memory 4">
-        </div>
+        for (let i = 0; i < 100; i++) {
 
-        <div class="photo">
-            <img src="photo5.jpg" alt="Memory 5">
-        </div>
+            const star =
+                document.createElement("div");
 
-        <div class="photo">
-            <img src="photo6.jpg" alt="Memory 6">
-        </div>
+            star.className = "star";
 
-        <div class="photo">
-            <img src="photo7.jpg" alt="Memory 7">
-        </div>
+            star.style.left =
+                Math.random() * 100 + "%";
 
-    </div>
+            star.style.top =
+                Math.random() * 100 + "%";
 
+            star.style.animationDelay =
+                Math.random() * 4 + "s";
 
-    <!-- BIRTHDAY WISH -->
+            star.style.animationDuration =
+                (2 + Math.random() * 4) + "s";
 
-    <div class="wish">
+            stars.appendChild(star);
+        }
 
-        <div class="wish-label">
-            A Special Message For You
-        </div>
 
-        <div class="wish-title">
-            Happy Birthday, Sissy 💗
-        </div>
+        /* =========================
+           FLOATING HEARTS
+        ========================= */
 
-        <div class="wish-text">
+        function createHeart() {
 
-            May your life always be filled with
-            happiness, love, beautiful memories,
-            endless smiles and wonderful moments.
-            Keep shining and keep smiling always. ✨
+            const heart =
+                document.createElement("div");
 
-        </div>
+            heart.className =
+                "floating-heart";
 
-        <div class="wish-love">
-            Made With ❤️ Just For You
-        </div>
+            heart.innerHTML =
+                Math.random() > .5
+                    ? "♥"
+                    : "♡";
 
-    </div>
+            heart.style.left =
+                Math.random() * 100 + "%";
 
+            heart.style.fontSize =
+                (12 + Math.random() * 25) + "px";
 
-    <!-- BEST MEMORIES -->
+            heart.style.setProperty(
+                "--move",
+                (Math.random() * 180 - 90) + "px"
+            );
 
-    <section class="memory-gallery">
+            heart.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
 
-        <div class="gallery-heading">
+            document
+                .querySelector(".story")
+                .appendChild(heart);
 
-            <div class="gallery-mini">
-                A Collection Of
-            </div>
+            setTimeout(() => {
+                heart.remove();
+            }, 8000);
+        }
 
-            <div class="gallery-title">
-                Best Memories
-            </div>
 
-            <div class="gallery-line"></div>
+        /* hearts only during slideshow */
 
-        </div>
+        const heartInterval =
+            setInterval(createHeart, 350);
 
+        setTimeout(() => {
 
-        <div class="memory-grid">
+            clearInterval(heartInterval);
 
+        }, 30000);
 
-            <!-- MEMORY 1 -->
+        const lightbox = document.getElementById("photoLightbox");
+        const lightboxImage = document.getElementById("lightboxImage");
+        const closeButton = document.getElementById("lightboxClose");
 
-            <div class="memory-card">
+        document.querySelectorAll(".memory-image img").forEach((photo) => {
+            photo.addEventListener("click", () => {
+                lightboxImage.src = photo.src;
+                lightbox.classList.add("active");
+            });
+        });
 
-                <div class="memory-image">
+        closeButton.addEventListener("click", () => {
+            lightbox.classList.remove("active");
+        });
 
-                    <img src="photo1.jpg">
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                lightbox.classList.remove("active");
+            }
+        });
 
-                    <div class="memory-number">
-                        01
-                    </div>
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                lightbox.classList.remove("active");
+            }
+        });
 
-                </div>
 
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Beautiful Moments ✨
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY 2 -->
-
-            <div class="memory-card">
-
-                <div class="memory-image">
-
-                    <img src="photo2.jpg">
-
-                    <div class="memory-number">
-                        02
-                    </div>
-
-                </div>
-
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Forever Smiles 💗
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY 3 -->
-
-            <div class="memory-card">
-
-                <div class="memory-image">
-
-                    <img src="photo3.jpg">
-
-                    <div class="memory-number">
-                        03
-                    </div>
-
-                </div>
-
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Little Moments ✨
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY 4 -->
-
-            <div class="memory-card">
-
-                <div class="memory-image">
-
-                    <img src="photo4.jpg">
-
-                    <div class="memory-number">
-                        04
-                    </div>
-
-                </div>
-
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Pure Happiness 🌸
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY 5 -->
-
-            <div class="memory-card">
-
-                <div class="memory-image">
-
-                    <img src="photo5.jpg">
-
-                    <div class="memory-number">
-                        05
-                    </div>
-
-                </div>
-
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Moments To Remember 💕
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY 6 -->
-
-            <div class="memory-card">
-
-                <div class="memory-image">
-
-                    <img src="photo6.jpg">
-
-                    <div class="memory-number">
-                        06
-                    </div>
-
-                </div>
-
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Our Beautiful Story 💖
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-            <!-- MEMORY 7 -->
-
-            <div class="memory-card">
-
-                <div class="memory-image">
-
-                    <img src="photo7.jpg">
-
-                    <div class="memory-number">
-                        07
-                    </div>
-
-                </div>
-
-                <div class="memory-caption">
-
-                    <span>BEST MEMORY</span>
-
-                    <h3>
-                        Always Special ✨
-                    </h3>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-</div>
-
-
-<script>
-
-/* =========================
-   STARS
-========================= */
-
-const stars =
-document.getElementById("stars");
-
-for(let i=0;i<100;i++){
-
-    const star =
-        document.createElement("div");
-
-    star.className="star";
-
-    star.style.left =
-        Math.random()*100+"%";
-
-    star.style.top =
-        Math.random()*100+"%";
-
-    star.style.animationDelay =
-        Math.random()*4+"s";
-
-    star.style.animationDuration =
-        (2+Math.random()*4)+"s";
-
-    stars.appendChild(star);
-}
-
-
-/* =========================
-   FLOATING HEARTS
-========================= */
-
-function createHeart(){
-
-    const heart =
-        document.createElement("div");
-
-    heart.className =
-        "floating-heart";
-
-    heart.innerHTML =
-        Math.random()>.5
-        ? "♥"
-        : "♡";
-
-    heart.style.left =
-        Math.random()*100+"%";
-
-    heart.style.fontSize =
-        (12+Math.random()*25)+"px";
-
-    heart.style.setProperty(
-        "--move",
-        (Math.random()*180-90)+"px"
-    );
-
-    heart.style.animationDuration =
-        (4+Math.random()*4)+"s";
-
-    document
-        .querySelector(".story")
-        .appendChild(heart);
-
-    setTimeout(()=>{
-        heart.remove();
-    },8000);
-}
-
-
-/* hearts only during slideshow */
-
-const heartInterval =
-setInterval(createHeart,350);
-
-setTimeout(()=>{
-
-    clearInterval(heartInterval);
-
-},30000);
-
-</script>
+    </script>
 
 </body>
-</html>
 
+</html>
